@@ -8,7 +8,7 @@ import {
 import defaultConfig from "../vite.config";
 
 const vitebookConfig = defineConfig<DefaultThemeConfig>({
-  include: ["story/**/*.story.{jsx,tsx}"],
+  include: ["stories/**/*.story.{jsx,tsx}"],
   plugins: [
     preactPlugin({ appFile: "App.tsx", exclude: /\/src/ }),
     clientPlugin(),
