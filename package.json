@@ -7,7 +7,7 @@
     "build": "npm run lint && vite build",
     "preview": "vite preview",
     "lint": "npm run lint:ts",
-    "lint:ts": "tsc && tsc --project .vitebook/tsconfig.json && rm -rf dist/ts",
+    "lint:ts": "tsc && tsc --project .vitebook/tsconfig.json",
     "vitebook:dev": "vitebook dev",
     "vitebook:build": "vitebook build",
     "vitebook:preview": "vitebook preview"

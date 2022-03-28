@@ -3,9 +3,9 @@
   "compilerOptions": {
     "composite": true,
     "jsxImportSource": "solid-js",
-    "outDir": "./dist/ts",
+    "outDir": "./dist.ts",
     "noEmit": false
   },
   "include": ["."],
-  "exclude": ["dist/ts", ".vitebook", "stories"]
+  "exclude": ["dist.ts", ".vitebook", "stories"]
 }
