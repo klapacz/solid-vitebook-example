@@ -4,14 +4,20 @@ import {
   defaultThemePlugin,
   DefaultThemeConfig,
 } from "@vitebook/theme-default/node";
+import SolidPlugin from "../lib/narrowSolidPlugin";
 
 export default defineConfig<DefaultThemeConfig>({
   include: ["story/**/*.story.{jsx,tsx}"],
   plugins: [
-    preactPlugin({ appFile: "App.tsx" }),
+    SolidPlugin({ include: /\/src\/solid/ }),
+    preactPlugin({ appFile: "App.tsx", exclude: /\/src\/solid/ }),
     clientPlugin(),
     defaultThemePlugin(),
   ],
+  alias: {
+    react: "preact/compat",
+    "react-dom": "preact/compat",
+  },
   site: {
     title: ".",
     description: "",
