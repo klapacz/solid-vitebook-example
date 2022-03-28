@@ -18,8 +18,7 @@
     "jsxFactory": "h",
     "jsxFragmentFactory": "Fragment"
   },
-  "include": ["src", ".vitebook"],
-  "exclude": ["src/solid"],
+  "include": ["story", ".vitebook"],
   "references": [
     { "path": "./tsconfig.node.json" },
     { "path": "./tsconfig.solid.json" }

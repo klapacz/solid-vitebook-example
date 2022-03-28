@@ -9,8 +9,8 @@ import SolidPlugin from "../lib/narrowSolidPlugin";
 export default defineConfig<DefaultThemeConfig>({
   include: ["story/**/*.story.{jsx,tsx}"],
   plugins: [
-    SolidPlugin({ include: /\/src\/solid/ }),
-    preactPlugin({ appFile: "App.tsx", exclude: /\/src\/solid/ }),
+    SolidPlugin({ include: /\/src/ }),
+    preactPlugin({ appFile: "App.tsx", exclude: /\/src/ }),
     clientPlugin(),
     defaultThemePlugin(),
   ],

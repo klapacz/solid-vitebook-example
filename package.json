@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "npm run lint && vite build",
     "preview": "vite preview",
+    "lint": "npm run lint:ts",
     "lint:ts": "tsc",
     "vitebook:dev": "vitebook dev",
     "vitebook:build": "vitebook build",
