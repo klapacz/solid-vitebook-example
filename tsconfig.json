@@ -1,17 +1,10 @@
 {
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "composite": true,
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "jsx": "preserve",
     "jsxImportSource": "solid-js",
-    "types": ["vite/client"],
-    "isolatedModules": true,
     "outDir": "./dist/ts",
-    "skipLibCheck": true
+    "noEmit": false
   },
   "include": ["."],
   "exclude": ["dist/ts", ".vitebook", "stories"]
