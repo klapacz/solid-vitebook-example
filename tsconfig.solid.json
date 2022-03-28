@@ -1,8 +1,0 @@
-{
-  "compilerOptions": {
-    "composite": true,
-    "jsx": "preserve",
-    "jsxImportSource": "solid-js"
-  },
-  "include": ["src"]
-}

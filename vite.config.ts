@@ -1,4 +1,4 @@
-import { defineConfig, UserConfig } from "vite";
+import { defineConfig } from "vite";
 import { narrowSolidPlugin } from "./lib/narrowSolidPlugin";
 
 // https://vitejs.dev/config/
