@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.DS_STORE
+.cache
+.temp
+node_modules/
+dist/
