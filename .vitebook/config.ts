@@ -1,15 +1,15 @@
 import { clientPlugin, defineConfig } from "@vitebook/client/node";
+import { mergeConfig } from "vite";
 import { preactPlugin } from "@vitebook/preact/node";
 import {
   defaultThemePlugin,
   DefaultThemeConfig,
 } from "@vitebook/theme-default/node";
-import SolidPlugin from "../lib/narrowSolidPlugin";
+import defaultConfig from "../vite.config";
 
-export default defineConfig<DefaultThemeConfig>({
+const vitebookConfig = defineConfig<DefaultThemeConfig>({
   include: ["story/**/*.story.{jsx,tsx}"],
   plugins: [
-    SolidPlugin({ include: /\/src/ }),
     preactPlugin({ appFile: "App.tsx", exclude: /\/src/ }),
     clientPlugin(),
     defaultThemePlugin(),
@@ -24,3 +24,5 @@ export default defineConfig<DefaultThemeConfig>({
     theme: {},
   },
 });
+
+export default mergeConfig(vitebookConfig, defaultConfig);

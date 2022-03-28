@@ -1,7 +1,11 @@
-import { defineConfig } from "vite";
-import SolidPlugin from "./lib/narrowSolidPlugin";
+import { defineConfig, UserConfig } from "vite";
+import { narrowSolidPlugin } from "./lib/narrowSolidPlugin";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [SolidPlugin({ include: /\/src/ })],
+  plugins: [narrowSolidPlugin({ include: /\/src/ })],
+  build: {
+    target: "esnext",
+    polyfillDynamicImport: false,
+  },
 });

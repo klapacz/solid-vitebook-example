@@ -6,7 +6,7 @@ export interface NarrowSolidPluginOptions extends Partial<Options> {
   exclude?: string | RegExp | Array<string> | Array<RegExp>;
 }
 
-export default function SolidPlugin({
+export function narrowSolidPlugin({
   include,
   exclude,
   ...rest
