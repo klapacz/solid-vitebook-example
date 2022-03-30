@@ -1,28 +1,22 @@
 import { clientPlugin, defineConfig } from "@vitebook/client/node";
-import { mergeConfig } from "vite";
-import { preactPlugin } from "@vitebook/preact/node";
 import {
   defaultThemePlugin,
   DefaultThemeConfig,
 } from "@vitebook/theme-default/node";
-import defaultConfig from "../vite.config";
+import { mergeConfig } from "vite";
+import baseConfig from "../vite.config";
 
 const vitebookConfig = defineConfig<DefaultThemeConfig>({
-  include: ["stories/**/*.story.{jsx,tsx}"],
+  include: ["src/**/*.story.svelte"],
   plugins: [
-    preactPlugin({ appFile: "App.tsx", exclude: /\/src/ }),
-    clientPlugin(),
+    clientPlugin({ appFile: "App.svelte", include: ["**/*.svelte"] }),
     defaultThemePlugin(),
   ],
-  alias: {
-    react: "preact/compat",
-    "react-dom": "preact/compat",
-  },
   site: {
-    title: ".",
+    title: "Solid Example",
     description: "",
     theme: {},
   },
 });
 
-export default mergeConfig(vitebookConfig, defaultConfig);
+export default mergeConfig(vitebookConfig, baseConfig);
